@@ -24,6 +24,9 @@ hr {
 .my-name, .my-email  {
   color:darkgoldenrod;
   border:solid;
+  height:100%;
+  display:flex;
+  align-items: center;
 }
 
 .label-email {
@@ -44,7 +47,6 @@ hr {
   background: rgb(0,0,0,0);
   display:flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .project-list {
