@@ -1,0 +1,52 @@
+:root {
+  --common-width: 75%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:darkslategrey;
+  font-family:  Helvetica, Arial, sans-serif;
+}
+.App {
+  padding:0;
+  margin:0;
+}
+
+.titlebar-contact, .project-list, .bio {
+  width:var(--common-width);
+  border:solid;
+  margin-left: auto;
+  margin-right: auto;
+  top:0;
+  left:0;
+}
+
+.titlebar-contact {
+  height: 10vh;
+  background: rgb(0,0,0,0);
+}
+
+.project-list {
+  height: 63vh;
+  display:flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+}
+.project {
+  width: 75%;
+  height: 25%;
+  border-radius:10px;
+  border:solid;
+  margin-left:auto;
+  margin-right:auto;
+  
+
+}
+
+.bio {
+  height: 25vh;
+}
