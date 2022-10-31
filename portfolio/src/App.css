@@ -9,12 +9,34 @@
 body {
   background-color:darkslategrey;
   font-family:  Helvetica, Arial, sans-serif;
+  color:ghostwhite
 }
 .App {
   padding:0;
   margin:0;
 }
-
+hr {
+  width:var(--common-width);
+  height:0.25rem;
+  background-color: slategrey;
+  border-color: slategray;
+}
+.my-name, .my-email  {
+  color:darkgoldenrod;
+  border:solid;
+  height:100%;
+  margin:auto;
+}
+.my-name {
+  float:left;
+}
+.my-email {
+  float:right;
+}
+.label-email {
+  /* font-size:24px; */
+  content:'';
+}
 .titlebar-contact, .project-list, .bio {
   width:var(--common-width);
   border:solid;
@@ -30,7 +52,7 @@ body {
 }
 
 .project-list {
-  height: 63vh;
+  height: 71vh;
   display:flex;
   flex-direction: column;
   row-gap: 10px;
@@ -48,5 +70,5 @@ body {
 }
 
 .bio {
-  height: 25vh;
+  height: 15vh;
 }
