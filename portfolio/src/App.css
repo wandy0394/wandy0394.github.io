@@ -2,6 +2,7 @@
   --common-width: 75%;
   --basic-text: slategray;
   --bright-text: ghostwhite;
+  --common-row-gap: 20px;
 }
 
 * {
@@ -32,10 +33,12 @@ hr {
   background-color: slategrey;
   border-color: slategray;
   box-shadow: 2px 5px #001111;
+  margin-bottom: var(--common-row-gap);
+  margin-top: var(--common-row-gap);
 }
 .my-name, .my-email  {
   color:var(--basic-text);
-  border:solid;
+  /* border:solid; */
   height:100%;
   display:flex;
   align-items: center;
@@ -53,7 +56,7 @@ hr {
 }
 .titlebar-contact, .project-list, .bio {
   width:var(--common-width);
-  border:solid;
+  /* border:solid; */
   margin-left: auto;
   margin-right: auto;
   top:0;
@@ -71,29 +74,91 @@ hr {
   height: 71vh;
   display:flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: var(--common-row-gap);
   justify-content: center;
 }
 .project {
   width: 75%;
   height: 25%;
   border-radius:10px;
-  border:solid;
+  position:relative;
   margin-left:auto;
   margin-right:auto;
-  background-color: slategray;
+  background-color: #051818;
   box-shadow: 10px 5px #001111;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #446666;
 }
+
+
 .project:hover {
-  background-color:lightslategray
+  border-color: #EEFFFF #446666 #446666 #446666;
 }
 
 .bio {
   height: 15vh;
-  font-size:2rem;
   display:flex;
-  align-items: center;
+  justify-content: space-between;
+  padding:0;
+  border:solid;
 }
 .bio-text {
   width:75%;
+  font-size:1.5rem;
+  height:100%;
+  vertical-align: bottom;
+  border:solid;
+  align-self:center;
 }
+.bio-name {
+  display:inline;
+  color:var(--bright-text);
+  font-size: 150%;
+  text-shadow: 2px 5px rgba(0, 11, 11, 25%);
+  border:solid;
+}
+.bio-email {
+  width:25%;
+  /* border:solid; */
+  text-align: right;
+  align-self:flex-start;
+  top:-10px;
+}
+
+.project-name, .project-blurb, .project-demo, .project-source {
+  border-style:solid;
+  position:absolute;
+}
+.project-blurb {
+  top:0;
+  left:0;
+}
+.project-name {
+  top:5%;
+  left:2%;
+  font-size:125%
+}
+.project-demo {
+  right:2%;
+  width: 20%;
+  height:25%;
+  top:70%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.project-blurb {
+  height:100%;
+  width:70%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-source {
+  right:0;
+}
+
