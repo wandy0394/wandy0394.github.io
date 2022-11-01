@@ -1,5 +1,7 @@
 :root {
   --common-width: 75%;
+  --basic-text: slategray;
+  --bright-text: ghostwhite;
 }
 
 * {
@@ -7,9 +9,18 @@
 }
 
 body {
-  background-color:darkslategrey;
+  /* background-color:darkslategrey; */
+  background:radial-gradient(
+    ellipse at left top, 
+    #003333 0%,
+    #002222 5%,
+    #002020 10%,
+    #001818 20%,
+    #001616 40%, 
+    #001111 100%);
   font-family:  Helvetica, Arial, sans-serif;
-  color:ghostwhite
+  color:var(--basic-text);
+  height:100vh;
 }
 .App {
   padding:0;
@@ -20,13 +31,20 @@ hr {
   height:0.25rem;
   background-color: slategrey;
   border-color: slategray;
+  box-shadow: 2px 5px #001111;
 }
 .my-name, .my-email  {
-  color:darkgoldenrod;
+  color:var(--basic-text);
   border:solid;
   height:100%;
   display:flex;
   align-items: center;
+}
+
+.my-name {
+  color:var(--bright-text);
+  font-size: 175%;
+  text-shadow: 2px 5px rgba(0, 11, 11, 25%);
 }
 
 .label-email {
@@ -43,7 +61,7 @@ hr {
 }
 
 .titlebar-contact {
-  height: 10vh;
+  height: 5vh;
   background: rgb(0,0,0,0);
   display:flex;
   justify-content: space-between;
@@ -53,7 +71,7 @@ hr {
   height: 71vh;
   display:flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
   justify-content: center;
 }
 .project {
@@ -63,10 +81,19 @@ hr {
   border:solid;
   margin-left:auto;
   margin-right:auto;
-  
-
+  background-color: slategray;
+  box-shadow: 10px 5px #001111;
+}
+.project:hover {
+  background-color:lightslategray
 }
 
 .bio {
   height: 15vh;
+  font-size:2rem;
+  display:flex;
+  align-items: center;
+}
+.bio-text {
+  width:75%;
 }

@@ -14,7 +14,7 @@ function App() {
       </div>
 
       <div className='bio'>
-        <p className='bio-text'></p>
+        <p className='bio-text'>This is some placeholder text that is as long as I am willing to make it plus a little bit more</p>
       </div>
       <hr></hr>
       <div className='project-list'>
