@@ -22,33 +22,41 @@ function App() {
       <div className='project-list'>
         <div className='project'>
         
-          <div className='project-name'>Project Name 1</div>
+          <div className='project-header'>
+            <div className='project-name'>Project Name 1 <p>subtitle</p></div>
+          </div>
           <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
           <div className='project-demo'>Try me</div>
-          <div className='project-source'>View on GitHub</div>
+          <div className='project-source'>GitHub</div>
         </div>
         <div className='project'>
-        <div className='project-name'>Project Name 2</div>
+          <div className='project-header'>
+            <div className='project-name'>Project Name 2 <p>subtitle</p></div>
+          </div>  
           <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
           <div className='project-demo'>Try me</div>
-          <div className='project-source'>View on GitHub</div>          
+          <div className='project-source'>GitHub</div>          
         </div>
         <div className='project'>
-        <div className='project-name'>Project Name 3</div>
+        <div className='project-header'>
+            <div className='project-name'>Project Name 3 <p>subtitle</p></div>
+          </div>  
           <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
           <div className='project-demo'>Try me</div>
-          <div className='project-source'>View on GitHub</div>        
+          <div className='project-source'>GitHub</div>        
         </div>
 
         <div className='project'>
-        <div className='project-name'>Project Name 4</div>
+        <div className='project-header'>
+            <div className='project-name'>Project Name 4 <p>subtitle</p></div>
+          </div>  
           <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
           <div className='project-demo'>Try me</div>
-          <div className='project-source'>View on GitHub</div>        
+          <div className='project-source'>GitHub</div>        
         </div>
 
     </div>
