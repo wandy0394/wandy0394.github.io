@@ -1,9 +1,10 @@
 
-import './App.css';
+import './AppVariant.css';
 
 function App() {
   return (
     <div className="App">
+      <div className='background-blur'></div>
       <div className='titlebar-contact'>
         <div className='my-name'>
             <p className='label-name'>FirstName, LastName</p>
