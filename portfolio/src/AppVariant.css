@@ -51,11 +51,15 @@
     color:var(--bright-text);
     font-size: 175%;
     text-shadow: 2px 5px rgba(0, 11, 11, 25%);
+    
   }
-  
+  .label-name {
+    display:none;
+  }
   .label-email {
     /* font-size:24px; */
     content:'';
+    display:none;
   }
   .titlebar-contact, .project-list, .bio {
     width:var(--common-width);
@@ -118,9 +122,15 @@
     width:75%;
     font-size:1.5rem;
     height:100%;
-    vertical-align: bottom;
+    position:relative;
     border:solid;
-    align-self:center;
+    
+  }
+  .bio-wide, .bio-narrow {
+    position:absolute;
+  }
+  .bio-narrow {
+    display:none;
   }
   .bio-name {
     display:inline;
@@ -231,5 +241,24 @@
     .project-list {
         grid-template-columns: 1fr;
     }
-
+    .project {
+      height:30vh;
+    }
+    .label-email {
+      /* font-size:24px; */
+      content:'';
+      display:inline;
+    }
+    .bio-email {
+      display:none;
+    }
+    .bio-text {
+      width:100%;
+    }
+    .bio-narrow {
+      display:block;
+    }
+    .bio-wide {
+      display:none;
+    }
   }

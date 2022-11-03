@@ -15,7 +15,10 @@ function App() {
       </div>
 
       <div className='bio'>
-        <p className='bio-text'>Hi, I'm <p className='bio-name'>Andy</p>.This is some placeholder text that is as long as I am willing to make it plus a little bit more</p>
+        <div className='bio-text'>Hi, I'm <p className='bio-name'>Andy</p>.
+          <p className='bio-narrow'>These are my projects.</p>
+          <p className='bio-wide'>This is some placeholder text that is as long as I am willing to make it plus a little bit more</p>
+        </div>
         <p className='bio-email'>bioEmail@email.com</p>
       </div>
       <hr></hr>
