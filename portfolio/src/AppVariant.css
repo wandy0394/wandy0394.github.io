@@ -112,22 +112,32 @@
   
   .bio {
     height: 15vh;
-    display:flex;
-    justify-content: space-between;
-    position:relative;
-    padding:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     border:solid;
   }
-  .bio-text {
-    width:75%;
-    font-size:1.5rem;
-    height:100%;
-    position:relative;
+ .bio-greeting{
+    font-size:2rem;
+    height:100%;    
+    border:solid; 
+  }
+
+  .bio-blurb {
     border:solid;
-    
+    grid-area: 2 / 1 / span 1 / span 2;
+    position:relative;
+    font-size:150%;
   }
   .bio-wide, .bio-narrow {
     position:absolute;
+    overflow-wrap: break-word;
+    /* border:solid; */
+    margin:0;
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+
   }
   .bio-narrow {
     display:none;
@@ -135,17 +145,22 @@
   .bio-name {
     display:inline;
     color:var(--bright-text);
-    font-size: 150%;
+    font-size: 200%;
     text-shadow: 2px 5px rgba(0, 11, 11, 25%);
-    border:solid;
+    /* border:solid; */
   }
   .bio-email {
-    width:25%;
-    /* border:solid; */
+    border:solid;
+    display:flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size:120%;
+    /* vertical-align: middle; */
+  }
+  .bio-email p {
+    vertical-align: middle;
+    border:solid;
     text-align: right;
-    align-self:flex-start;
-    top:-10px;
-    
   }
   
   .project-name, 
@@ -234,6 +249,9 @@
     .project-list {
         grid-template-columns: 1fr 1fr;
     }
+    .bio-blurb {
+      font-size:115%;
+    }
 
   }
 
@@ -252,13 +270,17 @@
     .bio-email {
       display:none;
     }
-    .bio-text {
-      width:100%;
-    }
     .bio-narrow {
-      display:block;
+      display:flex;
+      align-items: flex-end;
     }
     .bio-wide {
       display:none;
+    }
+    .bio-greeting {
+      grid-area: 1 / 1 / span 1 / span 2;
+    }
+    .bio-blurb {
+      font-size:150%;
     }
   }
