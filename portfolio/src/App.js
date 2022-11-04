@@ -26,44 +26,49 @@ function App() {
       <hr></hr>
       <div className='project-list'>
         <div className='project'>
-        
+          <div className='project-image'></div>
           <div className='project-header'>
-            <div className='project-name'>Project Name 1 <p>subtitle</p></div>
+            <div className='project-name'>Project Name 1</div>
           </div>
           <div className='project-blurb'>Blurb blurby blurb</div>
-          <div className='project-image'></div>
-          <div className='project-demo'>Try me</div>
-          <div className='project-source'>GitHub</div>
+          <div className='project-buttons'>
+            <div className='project-source button'>&lt;src /&gt;</div>
+            <div className='project-demo button'>Try me</div>
+          </div>
         </div>
         <div className='project'>
+          <div className='project-image'></div>
           <div className='project-header'>
-            <div className='project-name'>Project Name 2 <p>subtitle</p></div>
-          </div>  
+            <div className='project-name'>Project Name 1</div>
+          </div>
           <div className='project-blurb'>Blurb blurby blurb</div>
-          <div className='project-image'></div>
-          <div className='project-demo'>Try me</div>
-          <div className='project-source'>GitHub</div>          
+          <div className='project-buttons'>
+            <div className='project-source button'>&lt;src /&gt;</div>
+            <div className='project-demo button'>Try me</div>
+          </div>
         </div>
         <div className='project'>
-        <div className='project-header'>
-            <div className='project-name'>Project Name 3 <p>subtitle</p></div>
-          </div>  
-          <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
-          <div className='project-demo'>Try me</div>
-          <div className='project-source'>GitHub</div>        
+          <div className='project-header'>
+            <div className='project-name'>Project Name 1</div>
+          </div>
+          <div className='project-blurb'>Blurb blurby blurb</div>
+          <div className='project-buttons'>
+            <div className='project-source button'>&lt;src /&gt;</div>
+            <div className='project-demo button'>Try me</div>
+          </div>
         </div>
-
         <div className='project'>
-        <div className='project-header'>
-            <div className='project-name'>Project Name 4 <p>subtitle</p></div>
-          </div>  
-          <div className='project-blurb'>Blurb blurby blurb</div>
           <div className='project-image'></div>
-          <div className='project-demo'>Try me</div>
-          <div className='project-source'>GitHub</div>        
+          <div className='project-header'>
+            <div className='project-name'>Project Name 1</div>
+          </div>
+          <div className='project-blurb'>Blurb blurby blurb</div>
+          <div className='project-buttons'>
+            <div className='project-source button'>&lt;src /&gt;</div>
+            <div className='project-demo button'>Try me</div>
+          </div>
         </div>
-
     </div>
 
     </div>
