@@ -7,16 +7,14 @@ function App() {
   return (
     <div className="App">
       <div className='background-blur'></div>
-      <div className='titlebar-contact'>
-        <div className='my-email'>
-          <p className='label-email'>email@email.com</p>
-        </div>
-      </div>
-
+      <nav>
+        <a href='#' className='nav-link left active'>Projects</a>
+        <a href='#' className='nav-link right'>Tools</a>
+      </nav>
       <div className='bio'>
         <div className='bio-header'>
-        <div className='bio-greeting'>Hi, I'm <p className='bio-name'>Andy</p>.</div>
-        <div className='bio-email'><p>bioEmail@email.com</p></div>
+          <div className='bio-greeting'>Hi, I'm <p className='bio-name'>Andy</p>.</div>
+          <div className='bio-email'><p>bioEmail<br></br>@email.com</p></div>
         </div>
         <div className='bio-blurb'>
           <p className='bio-narrow'>These are my projects.</p>
