@@ -1,9 +1,6 @@
 :root {
 
   }
-* {
-  box-sizing: border-box;
-}
 
   
 .bio {
@@ -21,7 +18,6 @@
 }
 .bio-greeting{
   width:70%;
-  /* border:solid; */
 }
 .bio-name {
   display:inline;
