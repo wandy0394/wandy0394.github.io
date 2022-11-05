@@ -28,15 +28,12 @@ function App() {
     setPageToolSelected(true)
   }
 
-  useEffect(()=> {
-
-  }, [pageProjectSelected, pageToolSelected])
 
   return (
     <div className="App">
       <nav>
-        <a href='#' className='nav-link left active' onClick={clickProject}>Projects</a>
-        <a href='#' className='nav-link right' onClick={clickTools}>Tools</a>
+        <a href='#' className={`nav-link left ${pageProjectSelected ? 'selected':''}`} onClick={clickProject}>Projects</a>
+        <a href='#' className={`nav-link right ${pageToolSelected ? 'selected':''}`}  onClick={clickTools}>Tools</a>
       </nav>
       <Bio/>
       <hr></hr>

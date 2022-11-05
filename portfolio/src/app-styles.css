@@ -1,5 +1,5 @@
 :root {
-    --project-background-color:#203333;
+    --project-background-color:#273337;
     --common-width: 90%;
     /* --basic-text: rgba(210, 220, 230, 0.8);
     --bright-text: #CCEEFF; */
@@ -27,12 +27,12 @@ body {
 .App {
   background:radial-gradient(
     circle at left, 
-    #004444 0%,
-    #003333 5%,
-    #002222 10%,
-    #001818 20%,
-    #001616 40%, 
-    #001111 100%);
+    #354446 0%,
+    #253337 5%,
+    #172224 10%,
+    #141819 20%,
+    #121617 40%, 
+    #081113 100%);
   
   font-family:  Helvetica, Arial, sans-serif;
   color:var(--basic-text);
@@ -93,9 +93,15 @@ nav {
   padding-right: 10px;
   display:flex;
   align-items: center;
+  justify-content:center;
+  border-bottom: 2px;
 }
 .left {
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
+  border-right:solid; 
+  border-color: #001111;
+  border-right-width: 3px;
+    
 }
 .nav-link:hover {
   font-weight: bolder;
@@ -113,4 +119,8 @@ nav {
     /* visibility: hidden; */
     display:none;
     transition: 0.2s ease-in-out;
+}
+
+.selected {
+    text-decoration: underline;
 }

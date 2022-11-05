@@ -165,9 +165,12 @@
   .bio {
     height:8vh;
   }
-}
-@media only screen and (max-width:500px) {
   :root {
     --column-width: 90%;
+    --font-h1: 150%;
+    --font-h2: 125%;
+    --font-body: 100%;
+    --font-normal: 100%;
+    --font-sub: 85%;
   }
 }
