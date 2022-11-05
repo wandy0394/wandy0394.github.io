@@ -1,10 +1,10 @@
 :root {
-    --project-background-color:#273337;
+    --project-background-color:hsl(195, 18%, 18%);
     --common-width: 90%;
     /* --basic-text: rgba(210, 220, 230, 0.8);
     --bright-text: #CCEEFF; */
-    --basic-text:#CCEEFF;
-    --bright-text: #EEFFFF;
+    --basic-text:hsl(190, 60%, 90%);
+    --bright-text: hsl(190, 90%, 99%);
     --common-row-gap: 20px;
     --sample-image: url('https://images.unsplash.com/photo-1606503153255-59d8b8b82176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     --font-h1: 175%;
@@ -14,6 +14,12 @@
     --font-sub: 85%;
     --column-width: 300px;
     --common-border-radius: 12px;
+    --fade-1: hsl(192, 20%, 24%) 0%;
+    --fade-2:hsl(192, 20%, 18%) 5%;
+    --fade-3:hsl(192, 20%, 12%) 10%;
+    --fade-4:hsl(192, 30%, 9%) 20%;
+    --fade-5:hsl(192, 40%, 6%) 40%;
+    --fade-6:hsl(191, 50%, 3%) 100%;
 }
 
 * {
@@ -27,12 +33,12 @@ body {
 .App {
   background:radial-gradient(
     circle at left, 
-    #354446 0%,
-    #253337 5%,
-    #172224 10%,
-    #141819 20%,
-    #121617 40%, 
-    #081113 100%);
+    var(--fade-1) 0%,
+    var(--fade-2) 5%,
+    var(--fade-3) 10%,
+    var(--fade-4) 20%,
+    var(--fade-5) 40%, 
+    var(--fade-6) 100%);
   
   font-family:  Helvetica, Arial, sans-serif;
   color:var(--basic-text);
@@ -77,7 +83,7 @@ nav {
   display:flex;
   align-items: center;
   font-size:var(--font-body);
-  background:#CCEEFF;
+  background:var(--basic-text);
   margin-bottom:2vh;
   /* border:solid; */
   position:fixed;
@@ -111,9 +117,7 @@ nav {
 
 .footer {
     width:100%;
-    border:solid;
     height:5vh;
-    bottom:0;
 }
 
 .active {
@@ -129,4 +133,5 @@ nav {
 
 .selected {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
