@@ -168,6 +168,6 @@
 }
 @media only screen and (max-width:500px) {
   :root {
-    --column-width: 100%;
+    --column-width: 90%;
   }
 }

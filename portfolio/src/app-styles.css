@@ -26,13 +26,14 @@ body {
 }
 .App {
   background:radial-gradient(
-    ellipse at left top, 
+    circle at left, 
     #004444 0%,
     #003333 5%,
     #002222 10%,
     #001818 20%,
     #001616 40%, 
     #001111 100%);
+  
   font-family:  Helvetica, Arial, sans-serif;
   color:var(--basic-text);
   height:100vh;
@@ -62,34 +63,44 @@ hr {
   font-size:var(--font-h2);
   display:none;
 }
-nav, .project-list, .bio {
+.project-list, .bio {
     width:var(--common-width);
     margin-left: auto;
     margin-right: auto;
-    top:0;
-    left:0;
+    position:relative;
+    margin-top:5vh;
   }
   
 nav {
-  height: 3vh;
+  height: 5vh;
+  width:100vw;
   display:flex;
   align-items: center;
   font-size:var(--font-body);
-  margin-top:2vh;
+  background:#CCEEFF;
+  margin-bottom:2vh;
+  /* border:solid; */
+  position:fixed;
+  z-index:2;
 }
 .nav-link {
   /* border:solid; */
   width:50%;
+  height:100%;
   text-decoration: none;
-  color:#CCEEFF;
+  color:rgba(0, 22, 22, 1);
   padding-left: 10px;
   padding-right: 10px;
+  display:flex;
+  align-items: center;
 }
 .left {
-  text-align: right;
+  flex-direction: row-reverse;
 }
 .nav-link:hover {
-  text-decoration: underline;
+  font-weight: bolder;
+  transition: 0.2s ease-in-out;
+  background:var(--bright-text);
 }
 
 
