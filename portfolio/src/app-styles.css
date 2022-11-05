@@ -12,7 +12,7 @@
     --font-body: 125%;
     --font-normal: 100%;
     --font-sub: 85%;
-    --column-width: 400px;
+    --column-width: 300px;
     --common-border-radius: 12px;
 }
 
@@ -109,6 +109,12 @@ nav {
   background:var(--bright-text);
 }
 
+.footer {
+    width:100%;
+    border:solid;
+    height:5vh;
+    bottom:0;
+}
 
 .active {
     visibility: visible;

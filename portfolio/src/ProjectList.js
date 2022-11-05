@@ -15,7 +15,7 @@ function ProjectList( {isactive}) {
                     <div className='project-name'>Project Name 1</div>
                     <div className='project-blurb'>Blurb blurby blurb</div>
                     <div className='project-buttons'>
-                        <div className='project-source button'>&lt;src /&gt;</div>
+                        <div className='project-source button'>Source</div>
                         <div className='project-demo button'>Try me</div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ function ProjectList( {isactive}) {
                     <div className='project-name'>Project Name 1</div>
                     <div className='project-blurb'>Blurb blurby blurb</div>
                     <div className='project-buttons'>
-                        <div className='project-source button'>&lt;src /&gt;</div>
+                        <div className='project-source button'>Source</div>
                         <div className='project-demo button'>Try me</div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ function ProjectList( {isactive}) {
                     <div className='project-name'>Project Name 1</div>
                     <div className='project-blurb'>Blurb blurby blurb</div>
                     <div className='project-buttons'>
-                        <div className='project-source button'>&lt;src /&gt;</div>
+                        <div className='project-source button'>Source</div>
                         <div className='project-demo button'>Try me</div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ function ProjectList( {isactive}) {
                     <div className='project-name'>Project Name 1</div>
                     <div className='project-blurb'>Blurb blurby blurb</div>
                     <div className='project-buttons'>
-                        <div className='project-source button'>&lt;src /&gt;</div>
+                        <div className='project-source button'>Source</div>
                         <div className='project-demo button'>Try me</div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ function ProjectList( {isactive}) {
                     <div className='project-name'>Project Name 1</div>
                     <div className='project-blurb'>Blurb blurby blurb</div>
                     <div className='project-buttons'>
-                        <div className='project-source button'>&lt;src /&gt;</div>
+                        <div className='project-source button'>Source</div>
                         <div className='project-demo button'>Try me</div>
                     </div>
                 </div>

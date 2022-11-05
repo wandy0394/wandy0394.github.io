@@ -51,11 +51,15 @@
 .project-list {
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--column-width), 1fr));
-  gap:3%;
+  /* display:flex;
+  flex-wrap: wrap; */
+  row-gap: 30px;
+  column-gap: 30px;
 }
 
 .project {
   width: var(--column-width);
+
   height:60vh;
   border-radius:var(--common-border-radius);
   display:flex;
@@ -166,7 +170,7 @@
     height:8vh;
   }
   :root {
-    --column-width: 90%;
+    /* --column-width: 90%; */
     --font-h1: 150%;
     --font-h2: 125%;
     --font-body: 100%;

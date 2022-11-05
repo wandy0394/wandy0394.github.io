@@ -14,23 +14,23 @@ function Tools( {isactive}) {
         <div className={isactive ? 'page-tool active' :'page-tool inactive'}>
             <div className='tools-grid'>
                 <div className='tool'>
-                    <IconHtml className='tool-icon'/>
+                    <IconHtml className='tool-icon' color='#f06529'/>
                     <div className='tool-label'>HTML5</div>
                 </div>
                 <div className='tool'>
-                    <IconCSS className='tool-icon'/>
+                    <IconCSS className='tool-icon' color='#2965f1'/>
                     <div className='tool-label'>CSS</div>
                 </div>
                 <div className='tool'>
-                    <IconReact className='tool-icon'/>
+                    <IconReact className='tool-icon' color='#61DBFB'/>
                     <div className='tool-label'>ReactJS</div>
                 </div>
                 <div className='tool'>
-                    <IconNode className='tool-icon'/>
+                    <IconNode className='tool-icon' color='#68A063'/>
                     <div className='tool-label'>NodeJS</div>
                 </div>
                 <div className='tool'>
-                    <IconJavascript className='tool-icon'/>
+                    <IconJavascript className='tool-icon'color='goldenrod'/>
                     <div className='tool-label'>Javascript</div>
                 </div>
 
