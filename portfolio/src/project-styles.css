@@ -59,8 +59,8 @@
 
 .project {
   width: var(--column-width);
-
-  height:60vh;
+  aspect-ratio: 2 / 3;
+  /* height:60vh; */
   border-radius:var(--common-border-radius);
   display:flex;
   flex-direction: column;
@@ -151,7 +151,9 @@
   height:auto;
   display:inline-block;
 }
-
+.page-project {
+    padding-bottom: 1.5rem;
+}
 
 @media only screen and (max-width:600px) {
   .bio-wide {

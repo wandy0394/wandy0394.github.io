@@ -39,6 +39,7 @@ function App() {
       <hr></hr>
       <ProjectList isactive={pageProjectSelected} />
       <Tools isactive={pageToolSelected}/>
+      <hr></hr>
       <div className='footer'></div>
     </div>
   );

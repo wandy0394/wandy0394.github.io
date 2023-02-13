@@ -1,5 +1,5 @@
 :root {
-    --project-background-color:hsl(195, 18%, 18%);
+    --project-background-color:hsl(192, 18%, 18%);
     --common-width: 90%;
     /* --basic-text: rgba(210, 220, 230, 0.8);
     --bright-text: #CCEEFF; */
@@ -14,12 +14,12 @@
     --font-sub: 85%;
     --column-width: 300px;
     --common-border-radius: 12px;
-    --fade-1: hsl(192, 20%, 24%) 0%;
-    --fade-2:hsl(192, 20%, 18%) 5%;
-    --fade-3:hsl(192, 20%, 12%) 10%;
-    --fade-4:hsl(192, 30%, 9%) 20%;
-    --fade-5:hsl(192, 40%, 6%) 40%;
-    --fade-6:hsl(191, 50%, 3%) 100%;
+    --fade-1: hsl(192, 15%, 32%) 0%;
+    --fade-2:hsl(192, 15%, 24%) 5%;
+    --fade-3:hsl(192, 15%, 16%) 10%;
+    --fade-4:hsl(192, 25%, 12%) 20%;
+    --fade-5:hsl(192, 35%, 9%) 40%;
+    --fade-6:hsl(191, 45%, 6%) 100%;
 }
 
 * {
@@ -100,13 +100,20 @@ nav {
   display:flex;
   align-items: center;
   justify-content:center;
-  border-bottom: 2px;
+  
+  box-shadow: 0px 10px 5px -5px #000505;
+  border-right:solid; 
+  border-left:solid; 
+  border-color: #001111;
+  border-width: 3px;
 }
 .left {
   /* flex-direction: row-reverse; */
-  border-right:solid; 
+  /* border-right:solid; 
+  border-left:solid; 
   border-color: #001111;
-  border-right-width: 3px;
+  border-right-width: 3px; */
+  
     
 }
 .nav-link:hover {
@@ -117,7 +124,7 @@ nav {
 
 .footer {
     width:100%;
-    height:5vh;
+    height:15vh;
 }
 
 .active {
