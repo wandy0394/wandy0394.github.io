@@ -559,3 +559,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+* {
+  scroll-behavior: smooth;
+}
