@@ -10,10 +10,10 @@ function NavLink({href, label}) {
   )
 }
 
-function Section({id, children}) {
+function Section({id, children, classes}) {
   return (
-    <div id={id} className='h-screen pt-20'>
-      <div className='px-4 md:px-24 h-full'>
+    <div id={id} className={`h-screen pt-20 w-full ${classes}`}>
+      <div className='px-4 md:px-24 h-full w-full'>
         {children}
       </div>
     </div>
@@ -30,14 +30,13 @@ function App() {
 
 
   return (
-    <div className=''>
-      <div className="drawer drawer-end">
-        <input id="side-menu-drawer" type="checkbox" className="drawer-toggle" checked={visible} /> 
-        <div className="drawer-content relative" >
+    <div className='w-full'>
+      <div className="drawer drawer-end ">
+        <input id="side-menu-drawer" type="checkbox" className="drawer-toggle" checked={visible} defaultChecked/> 
+        <div className="drawer-content w-full">
           <div className="w-full fixed navbar bg-base-300 px-4 md:px-24">
-
             <div className='navbar-start prose'>
-              <h1 className='text-accent'>Andy</h1>
+              <h1 className='text-accent'>AW</h1>
             </div>
             <div className="flex-none navbar-end hidden md:block w-1/2 md:w-3/4">
               <div className='hidden tabs gap-x-4 items-center justify-end md:flex'>
@@ -53,19 +52,31 @@ function App() {
               </label>
             </div> 
           </div>
-          <Section id='description'>
-            About me
+          <Section id='description' classes='bg-base-200'>
+            <div className='flex items-center justify-center w-full h-full'>
+              <div className='flex flex-col gap-y-2 items-center justify-center'>
+                <div className='prose'>
+                  <h1 >Hi, my name is <span className='text-accent'>Andy</span>.</h1>
+                </div>
+                <p className='prose-2xl'>I'm focused on learning new technologies to solve interesting challenges in different spaces.</p>
+                <div className='flex gap-x-4'>
+                  <button className='btn btn-accent bg-teal-900 border-teal-900'>Resume</button>
+                  <button className='btn text-white bg-slate-800'>Email me</button>
+                </div>
+              </div>
+            </div>
           </Section>
+
           <Section id='project-list'>
             MyProjects
           </Section>
-          <Section id='experience'>
+          <Section id='experience' classes='bg-base-200'>
             Experience
           </Section>
           <Section id='skills'>
             Skills
           </Section>
-          <Section id='tools'>
+          <Section id='tools' classes='bg-base-200'>
             Tools
           </Section>
         </div> 
