@@ -32,9 +32,17 @@ function ToolCard({children}) {
  )
 }
 
+function SkillCard({children}) {
+  return (
+   <div className='flex items-center gap-x-4 px-2'>
+     {children}
+   </div>
+  )
+ }
+
 function ToolSetCard({children}) {
   return (
-    <div className='flex flex-col w-1/4 items-center rounded-2xl border gap-y-4 py-4 px-20 h-full'>
+    <div className='flex flex-col h-1/2 items-center rounded-2xl border gap-y-4 py-4 px-20 lg:h-full'>
       {children}
     </div>
   )
@@ -96,13 +104,64 @@ function App() {
           <Section id='project-list' classes='bg-base-200'>
             MyProjects
           </Section>
-          <Section id='skills'>
-            Skills
+          <Section id='skills' classes='h-screen'>
+            <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-full w-full'>
+              <div className='prose'>
+                <h1 className='border-b border-teal-400'>Skills</h1>
+              </div>
+              <div id='skill-set' className='flex gap-16 w-full items-start justify-center flex-wrap'>
+                <div className='flex flex-col min-w-fit w-1/3 items-center rounded-2xl border gap-y-4 py-4 px-20 h-full'>
+                  <div className='prose-xl'>Technical</div>
+                  <div className='flex w-full flex-col gap-y-8'>
+                    <SkillCard>
+                      <div className='prose-2xl'>Requirements Analysis</div>
+                    </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Systems Design</div>
+                      </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Solution Implementation</div>
+                      </SkillCard>
+                    
+                    <SkillCard>
+                      <div className='prose-2xl'>Testing, Validation and Verification</div>
+                    </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Troubleshooting/Debugging</div>
+                    </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Configuration Management</div>
+                    </SkillCard>
+                  </div>
+                </div>
+                <div className='flex flex-col min-w-fit w-1/3 items-center rounded-2xl border gap-y-4 py-4 px-20 h-full'>
+                  <div className='prose-xl'>Professional</div>
+                  <div className='flex w-full flex-col gap-y-4'>
+                    <SkillCard>
+                      <div className='prose-2xl'>Solution Demonstration</div>
+                    </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Feedback Elicitation</div>
+                      </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>User Training</div>
+                      </SkillCard>
+                    
+                    <SkillCard>
+                      <div className='prose-2xl'>Collaborative Problem Solving</div>
+                      </SkillCard>
+                    <SkillCard>
+                      <div className='prose-2xl'>Documentation</div>
+                    </SkillCard>
+                  </div>
+                </div>                
+              </div>
+            </div>
           </Section>
           <Section id='tools' classes='bg-base-200 h-screen'>
             <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-full'>
               <div className='prose'>
-                <h1>Tools</h1>
+                <h1 className='border-b border-teal-400'>Tools</h1>
               </div>
               <div id='tool-set' className='flex gap-16 w-full items-start justify-center flex-wrap'>
                 <ToolSetCard>
