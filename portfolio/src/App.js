@@ -101,57 +101,130 @@ function App() {
           <Section id='experience'>
             Experience
           </Section>
-          <Section id='project-list' classes='bg-base-200'>
-            MyProjects
+          <Section id='project-list' classes='bg-base-200 h-full'>
+            <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-3/4 w-full px-16'>
+              <div className='prose'>
+                <h1 className='border-b border-teal-400'>Projects</h1>
+              </div>
+              <div className='carousel w-full h-full space-x-8'>
+                <div id='project-1' className='carousel-item w-full md:w-1/2 lg:w-1/3'>
+                  <div className='card rounded-none w-full border border-solid border-black h-full'>
+                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
+                    <div className='card-body space-y-2 pt-4'>
+                      <h2 className='card-title'>
+                        Project 1
+                      </h2>
+                      <p>Descriptive text about project goes here</p>
+                      <div className='card-actions flex justify-end gap-4'>
+                        <button className='btn btn-accent'>Try me</button>
+                        <button className='btn'>Source</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
+                  <div id='project-2' className='card rounded-none w-full border border-solid border-black h-full'>
+                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
+                    <div className='card-body space-y-2 pt-4'>
+                      <h2 className='card-title'>
+                        Project 2
+                      </h2>
+                      <p>Descriptive text about project goes here</p>
+                      <div className='card-actions flex justify-end gap-4'>
+                        <button className='btn btn-accent'>Try me</button>
+                        <button className='btn'>Source</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
+                  <div id='project-3' className='card rounded-none w-full border border-solid border-black h-full'>
+                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
+                    <div className='card-body space-y-2 pt-4'>
+                      <h2 className='card-title'>
+                        Project 3
+                      </h2>
+                      <p>Descriptive text about project goes here</p>
+                      <div className='card-actions flex justify-end gap-4'>
+                        <button className='btn btn-accent'>Try me</button>
+                        <button className='btn'>Source</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
+                  <div id='project-4' className='card rounded-none w-full border border-solid border-black h-full'>
+                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
+                    <div className='card-body space-y-2 pt-4'>
+                      <h2 className='card-title'>
+                        Project 4
+                      </h2>
+                      <p>Descriptive text about project goes here</p>
+                      <div className='card-actions flex justify-end gap-4'>
+                        <button className='btn btn-accent'>Try me</button>
+                        <button className='btn'>Source</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>                                                
+              </div>
+              <div className='flex justify-center w-full py-2 gap-2'>
+                <a href='#project-1' class='btn btn-xs'>1</a>
+                <a href='#project-2' class='btn btn-xs'>2</a>
+                <a href='#project-3' class='btn btn-xs'>3</a>
+                <a href='#project-4' class='btn btn-xs'>4</a>
+              </div>
+            </div>
+
           </Section>
           <Section id='skills' classes='h-screen'>
-            <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-full w-full'>
+            <div className='hidden flex-col gap-y-8 items-center justify-center gap-2 h-full w-full lg:flex'>
               <div className='prose'>
                 <h1 className='border-b border-teal-400'>Skills</h1>
               </div>
               <div id='skill-set' className='flex gap-16 w-full items-start justify-center flex-wrap'>
-                <div className='flex flex-col min-w-fit w-1/3 items-center rounded-2xl border gap-y-4 py-4 px-20 h-full'>
-                  <div className='prose-xl'>Technical</div>
+                <div className='flex flex-col min-w-[30%] w-1/3 items-center border gap-y-4 py-4 px-20 h-full'>
+                  <div className='prose-lg'>Technical</div>
                   <div className='flex w-full flex-col gap-y-8'>
                     <SkillCard>
-                      <div className='prose-2xl'>Requirements Analysis</div>
+                      <div className='prose-xl'>Requirements Analysis</div>
                     </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Systems Design</div>
+                      <div className='prose-xl'>Systems Design</div>
                       </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Solution Implementation</div>
+                      <div className='prose-xl'>Solution Implementation</div>
                       </SkillCard>
                     
                     <SkillCard>
-                      <div className='prose-2xl'>Testing, Validation and Verification</div>
+                      <div className='prose-xl'>Testing, Validation and Verification</div>
                     </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Troubleshooting/Debugging</div>
+                      <div className='prose-xl'>Troubleshooting/Debugging</div>
                     </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Configuration Management</div>
+                      <div className='prose-xl'>Configuration Management</div>
                     </SkillCard>
                   </div>
                 </div>
-                <div className='flex flex-col min-w-fit w-1/3 items-center rounded-2xl border gap-y-4 py-4 px-20 h-full'>
-                  <div className='prose-xl'>Professional</div>
+                <div className='flex flex-col min-w-[20%] w-1/3 items-center border gap-y-4 py-4 px-20 h-full'>
+                  <div className='prose-lg'>Professional</div>
                   <div className='flex w-full flex-col gap-y-4'>
                     <SkillCard>
-                      <div className='prose-2xl'>Solution Demonstration</div>
+                      <div className='prose-xl'>Solution Demonstration</div>
                     </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Feedback Elicitation</div>
+                      <div className='prose-xl'>Feedback Elicitation</div>
                       </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>User Training</div>
+                      <div className='prose-xl'>User Training and Support</div>
                       </SkillCard>
                     
                     <SkillCard>
-                      <div className='prose-2xl'>Collaborative Problem Solving</div>
+                      <div className='prose-xl'>Collaborative Problem Solving</div>
                       </SkillCard>
                     <SkillCard>
-                      <div className='prose-2xl'>Documentation</div>
+                      <div className='prose-xl'>Documentation</div>
                     </SkillCard>
                   </div>
                 </div>                
