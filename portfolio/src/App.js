@@ -1,10 +1,8 @@
 import './App.css'
 import {Button, Drawer, Navbar} from 'react-daisyui'
 import { useState } from 'react'
-import {IoLogoJavascript as IconJavascript} from 'react-icons/io'
-import {FaHtml5 as IconHtml, FaCss3Alt as IconCSS, FaReact as IconReact, FaNodeJs as IconNode, FaFileCode as IconScript, FaFileExcel as IconExcel} from 'react-icons/fa'
-import {SiPowershell as IconPowerShell, SiTypescript as IconTypescript} from 'react-icons/si'
-import {GrMysql as IconSQL} from 'react-icons/gr'
+
+import SectionTools from './SectionTools'
 
 function NavLink({href, label}) {
   return (
@@ -16,21 +14,15 @@ function NavLink({href, label}) {
 
 function Section({id, children, classes}) {
   return (
-    <div id={id} className={`min-h-screen pt-20 w-full ${classes}`}>
-      <div className='px-4 md:px-24 h-full w-full'>
+    <div id={id} className={`min-h-screen pt-20 lg:pt-0 w-full ${classes}`}>
+      <div className='px-4 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
         {children}
       </div>
     </div>
   )
 }
 
-function ToolCard({children}) {
- return (
-  <div className='flex max-w-xs items-center gap-x-4 px-2 border-b border-solid  border-slate-500'>
-    {children}
-  </div>
- )
-}
+
 
 function SkillCard({children}) {
   return (
@@ -40,13 +32,7 @@ function SkillCard({children}) {
   )
  }
 
-function ToolSetCard({children}) {
-  return (
-    <div className='flex flex-col h-1/2 items-center rounded-2xl border gap-y-4 py-4 px-20 lg:h-full'>
-      {children}
-    </div>
-  )
-}
+
 
 function App() {
 
@@ -231,74 +217,8 @@ function App() {
               </div>
             </div>
           </Section>
-          <Section id='tools' classes='bg-base-200 h-screen'>
-            <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-full'>
-              <div className='prose'>
-                <h1 className='border-b border-teal-400'>Tools</h1>
-              </div>
-              <div id='tool-set' className='flex gap-16 w-full items-start justify-center flex-wrap'>
-                <ToolSetCard>
-                  <div className='prose-xl'>Frontend</div>
-                  <div className='flex max-w-xs w-full flex-col gap-y-4'>
-                    <ToolCard>
-                      <IconHtml size={30} className='' color='#f06529'/>
-                      <div className='prose-2xl'>HTML</div>
-                    </ToolCard>
-                    <ToolCard>
-                      <IconCSS size={30}  className='' color='#2965f1'/>
-                      <div className='prose-2xl'>CSS</div>
-                      </ToolCard>
-                    <ToolCard>
-                      <IconJavascript size={30}  className=''color='goldenrod'/>
-                      <div className='prose-2xl'>Javascript</div>
-                      </ToolCard>
-                    
-                    <ToolCard>
-                      <IconTypescript size={30}  className=''color='#007acc'/>
-                      <div className='prose-2xl'>Typescript</div>
-                      </ToolCard>
-                    <ToolCard>
-                      <IconReact size={30} className='' color='#61DBFB'/>
-                      <div className='prose-2xl'>React</div>
-                    </ToolCard>
-                  </div>
-                </ToolSetCard>
-                <ToolSetCard>
-                  <div className='prose-xl'>Backend</div>
-                  <div className='flex max-w-xs w-full flex-col gap-y-4'>
-                    <ToolCard>
-                      <IconNode size={30} className='' color='#68A063'/>
-                      <div className='prose-2xl'>NodeJS</div>
-                    </ToolCard>
-                    <ToolCard>
-                      <IconSQL size={30} className='' color='#2965f1'/>
-                      <div className='prose-2xl'>mySQL</div>
-                    </ToolCard>
-                  </div>
-                </ToolSetCard>
-                <ToolSetCard>
-                  <div className='prose-xl'>Scripting</div>
-                  <div className='flex max-w-xs w-full flex-col gap-y-4'>
-                    <ToolCard>
-                      <IconPowerShell size={30} className='' color='#008DED'/>
-                      <div className='prose-2xl'>PowerShell</div>
-                    </ToolCard>
-                    <ToolCard>
-                      <IconScript size={30} className='' color='#254768'/>
-                      <div className='prose-2xl'>AutoIt</div>
-                    </ToolCard>
-                    <ToolCard>
-                      <IconScript size={30} className=''color='grey'/>
-                      <div className='prose-2xl'>Bash</div>
-                    </ToolCard>
-                    <ToolCard>
-                      <IconExcel size={30} className='' color='#1d6f42'/>
-                      <div className='prose-2xl'>VBA</div>
-                    </ToolCard>
-                  </div>
-                </ToolSetCard>
-              </div>
-            </div>
+          <Section id='tools' classes='bg-base-200'>
+            <SectionTools/>
           </Section>
         </div> 
         <div className="drawer-side h-full">
