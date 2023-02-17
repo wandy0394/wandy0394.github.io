@@ -5,9 +5,7 @@ import {SiPowershell as IconPowerShell, SiTypescript as IconTypescript} from 're
 import {GrMysql as IconSQL} from 'react-icons/gr'
 function ToolSetCard({children}) {
     return (
-    <div className='flex flex-col items-center border gap-y-4 py-4 px-20'>
-    {/* <div className='grid grid-rows-3 border'> */}
-
+    <div className='flex flex-col items-center border gap-y-4 py-4 px-20 bg-gray-900'>
         {children}
       </div>
     )

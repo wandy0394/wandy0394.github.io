@@ -3,6 +3,7 @@ import {Button, Drawer, Navbar} from 'react-daisyui'
 import { useState } from 'react'
 
 import SectionTools from './SectionTools'
+import SectionSkills from './SectionSkills'
 
 function NavLink({href, label}) {
   return (
@@ -14,7 +15,7 @@ function NavLink({href, label}) {
 
 function Section({id, children, classes}) {
   return (
-    <div id={id} className={`min-h-screen pt-20 lg:pt-0 w-full ${classes}`}>
+    <div id={id} className={`min-h-screen py-20 xl:py-0 w-full ${classes}`}>
       <div className='px-4 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
         {children}
       </div>
@@ -24,13 +25,6 @@ function Section({id, children, classes}) {
 
 
 
-function SkillCard({children}) {
-  return (
-   <div className='flex items-center gap-x-4 px-2'>
-     {children}
-   </div>
-  )
- }
 
 
 
@@ -163,63 +157,13 @@ function App() {
             </div>
 
           </Section>
-          <Section id='skills' classes='h-screen'>
-            <div className='hidden flex-col gap-y-8 items-center justify-center gap-2 h-full w-full lg:flex'>
-              <div className='prose'>
-                <h1 className='border-b border-teal-400'>Skills</h1>
-              </div>
-              <div id='skill-set' className='flex gap-16 w-full items-start justify-center flex-wrap'>
-                <div className='flex flex-col min-w-[30%] w-1/3 items-center border gap-y-4 py-4 px-20 h-full'>
-                  <div className='prose-lg'>Technical</div>
-                  <div className='flex w-full flex-col gap-y-8'>
-                    <SkillCard>
-                      <div className='prose-xl'>Requirements Analysis</div>
-                    </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Systems Design</div>
-                      </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Solution Implementation</div>
-                      </SkillCard>
-                    
-                    <SkillCard>
-                      <div className='prose-xl'>Testing, Validation and Verification</div>
-                    </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Troubleshooting/Debugging</div>
-                    </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Configuration Management</div>
-                    </SkillCard>
-                  </div>
-                </div>
-                <div className='flex flex-col min-w-[20%] w-1/3 items-center border gap-y-4 py-4 px-20 h-full'>
-                  <div className='prose-lg'>Professional</div>
-                  <div className='flex w-full flex-col gap-y-4'>
-                    <SkillCard>
-                      <div className='prose-xl'>Solution Demonstration</div>
-                    </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Feedback Elicitation</div>
-                      </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>User Training and Support</div>
-                      </SkillCard>
-                    
-                    <SkillCard>
-                      <div className='prose-xl'>Collaborative Problem Solving</div>
-                      </SkillCard>
-                    <SkillCard>
-                      <div className='prose-xl'>Documentation</div>
-                    </SkillCard>
-                  </div>
-                </div>                
-              </div>
-            </div>
+          <Section id='skills' classes=''>
+            <SectionSkills/>
           </Section>
           <Section id='tools' classes='bg-base-200'>
             <SectionTools/>
           </Section>
+          <Section id='footer'></Section>
         </div> 
         <div className="drawer-side h-full">
           <label for="side-menu-drawer"  className="drawer-overlay" onClick={toggleVisible}></label> 
