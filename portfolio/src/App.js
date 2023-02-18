@@ -8,7 +8,7 @@ import SectionExperience from './SectionExperience'
 
 function NavLink({href, label, index, activeIndex}) {
   return (
-    <a href={href} className={`${index==activeIndex?'border-accent-focus':''} tab tab-bordered cursor-pointer hover:text-accent-focus hover:border-accent-focus`}>
+    <a href={href} className={`${index===activeIndex?'border-accent-focus':''} tab tab-bordered cursor-pointer hover:text-accent-focus hover:border-accent-focus`}>
       <p className='prose-xl'>{label}</p>
     </a>
   )
@@ -16,7 +16,7 @@ function NavLink({href, label, index, activeIndex}) {
 
 function Anchor({href, children, index, activeIndex, onClick}) {
   return (
-    <a href={href} onClick={onClick} className={`${index==activeIndex?'text-accent-focus':''} hover:bg-teal-900 focus:bg-teal-800`}>{children}</a>
+    <a href={href} onClick={onClick} className={`${index===activeIndex?'text-accent-focus':''} hover:bg-teal-900 focus:bg-teal-800`}>{children}</a>
   )
 }
 
@@ -50,7 +50,6 @@ function App() {
 
   const [visible, setVisible] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
-  const [scrollvalue, setScrollvalue] = useState(0)
 
   const descRef = useRef(null)
   const expRef = useRef(null)
@@ -67,7 +66,7 @@ function App() {
 
   function handleScroll() {
     let index = 0
-    refs.map(ref=>{
+    refs.forEach(ref=>{
       if (ref.current.offsetTop + window.innerHeight / 2 < window.scrollY) {
         index++
       }
