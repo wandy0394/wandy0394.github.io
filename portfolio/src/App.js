@@ -87,7 +87,7 @@ function App() {
       <div className="drawer drawer-end h-auto" >
         <input id="side-menu-drawer" type="checkbox" className="drawer-toggle" checked={visible} readOnly/> 
         <div className="drawer-content w-full">
-          <div className="w-full fixed navbar bg-base-300 px-4 md:px-24">
+          <div className="w-full fixed navbar bg-base-300 px-4 md:px-24 z-20">
             <div className='navbar-start prose'>
               <h1 className='text-accent'>AW</h1>
             </div>
