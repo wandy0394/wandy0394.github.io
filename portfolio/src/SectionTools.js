@@ -7,7 +7,7 @@ import Card from './common/Card'
 
 function ToolCard({children}) {
     return (
-     <div className='flex items-center gap-x-4 px-2 border-b border-solid border-slate-500'>
+     <div className='flex justify-start items-center gap-x-4 px-2 border-b border-solid border-slate-500'>
        {children}
      </div>
     )

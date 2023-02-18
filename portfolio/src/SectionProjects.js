@@ -33,19 +33,19 @@ export default function SectionProjects() {
             </div>
             <div className='carousel carousel-center w-full h-full space-x-8 p-4 md:p-8 bg-base-300'>
             {
-                projects.map((project)=>{
+                projects.map((project, index)=>{
                     return (
-                        <ProjectCard id={project.id} projectName={project.projectName} description={project.description}/>
+                        <ProjectCard key={index} id={project.id} projectName={project.projectName} description={project.description}/>
                     )
                 })
             }
             
             </div>
             <div className='flex justify-center w-full py-2 gap-2'>
-            <a href='#project-1' class='btn btn-xs'>1</a>
-            <a href='#project-2' class='btn btn-xs'>2</a>
-            <a href='#project-3' class='btn btn-xs'>3</a>
-            <a href='#project-4' class='btn btn-xs'>4</a>
+            <a href='#project-1' className='btn btn-xs'>1</a>
+            <a href='#project-2' className='btn btn-xs'>2</a>
+            <a href='#project-3' className='btn btn-xs'>3</a>
+            <a href='#project-4' className='btn btn-xs'>4</a>
             </div>
         </div>
         

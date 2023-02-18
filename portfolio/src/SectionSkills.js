@@ -2,7 +2,7 @@ import Card from "./common/Card"
 
 function SkillCard({label}) {
     return (
-     <div className='flex items-center w-full'>
+     <div className='flex justify-start md:justify-center items-center w-full'>
         <div className='prose-lg md:prose-xl'>{label}</div>
      </div>
     )
@@ -28,7 +28,7 @@ export default function SectionSkills() {
                     <SkillCard label='Solution Demonstration'/>
                     <SkillCard label='Feedback Elicitation'/>
                     <SkillCard label='User Training andd Support'/>             
-                    <SkillCard label='Documentation Management'/>
+                    <SkillCard label='Document Management'/>
                 </Card>
             </div>
         </div>
