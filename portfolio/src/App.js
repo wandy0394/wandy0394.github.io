@@ -1,5 +1,5 @@
 import './App.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import SectionTools from './SectionTools'
 import SectionSkills from './SectionSkills'
@@ -15,16 +15,16 @@ function NavLink({href, label, index, activeIndex}) {
   )
 }
 
-// function Anchor({href, index, activeIndex, onClick}) {
-//   return (
-//     <a href={href} onClick={()=>onClick} ></a>
-//   )
-// }
+function Anchor({href, children, index, activeIndex, onClick}) {
+  return (
+    <a href={href} onClick={onClick} className={`${index==activeIndex?'text-accent-focus':''} hover:bg-teal-900 focus:bg-teal-800`}>{children}</a>
+  )
+}
 
-function Section({id, children, classes}) {
+function Section({id, children, classes, refProp}) {
 
   return (
-    <div id={id} className={`min-h-screen py-20 xl:py-0 w-full ${classes}`}>
+    <div ref={refProp} id={id} className={`min-h-screen py-20 xl:py-0 w-full ${classes}`}>
       <div className='px-16 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
         {children}
       </div>
@@ -40,16 +40,31 @@ function Section({id, children, classes}) {
 function App() {
 
   const [visible, setVisible] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(-1)
+  const [activeIndex, setActiveIndex] = useState(0)
   const [scrollvalue, setScrollvalue] = useState(0)
+  // const [refs, setRefs] = useState([])
+
+  const descRef = useRef(null)
+  const expRef = useRef(null)
+  const projectRef = useRef(null)
+  const skillsRef = useRef(null)
+  const toolsRef = useRef(null)
+  const footerRef = useRef(null)
+
+  const refs = [descRef, expRef, projectRef, skillsRef, toolsRef, footerRef]
 
   function toggleVisible() {
     setVisible(p=>!p)
   }
 
   function handleScroll() {
-
-    setScrollvalue(window.scrollY)
+    let index = 0
+    refs.map(ref=>{
+      if (ref.current.offsetTop + window.innerHeight/2 < window.scrollY) {
+        index++
+      }
+    })
+    setActiveIndex(index)
   }
 
   useEffect(()=>{
@@ -71,10 +86,10 @@ function App() {
             </div>
             <div className="flex-none navbar-end hidden md:block w-1/2 md:w-3/4">
               <div className='hidden tabs gap-x-4 items-center justify-end md:flex'>
-                  <NavLink href='#experience' label='Experience' index={0} activeIndex={activeIndex}/>
-                  <NavLink href='#project-list' label='Projects'index={1} activeIndex={activeIndex}/>
-                  <NavLink href='#skills' label='Skills'index={2} activeIndex={activeIndex}/>
-                  <NavLink href='#tools' label='Tools'index={3} activeIndex={activeIndex}/>
+                  <NavLink href='#experience' label='Experience' index={1} activeIndex={activeIndex}/>
+                  <NavLink href='#project-list' label='Projects'index={2} activeIndex={activeIndex}/>
+                  <NavLink href='#skills' label='Skills'index={3} activeIndex={activeIndex}/>
+                  <NavLink href='#tools' label='Tools'index={4} activeIndex={activeIndex}/>
               </div>
               
             </div>
@@ -85,7 +100,7 @@ function App() {
             </div> 
           </div>
           
-          <Section id='description' classes='bg-base-200'>
+          <Section refProp={descRef} id='description' classes='bg-base-200'>
             <div className='flex items-center justify-center w-full h-screen'>
               <div className='flex flex-col gap-y-2 items-center justify-center w-full'>
                 <div className='prose'>
@@ -103,27 +118,27 @@ function App() {
             </div>
           </Section>
 
-          <Section id='experience'>
+          <Section refProp={expRef} id='experience'>
             Experience
           </Section>
-          <Section id='project-list' classes='bg-base-200'>
+          <Section refProp={projectRef} id='project-list' classes='bg-base-200'>
             <SectionProjects/>
           </Section>
-          <Section id='skills' classes=''>
+          <Section refProp={skillsRef} id='skills' classes=''>
             <SectionSkills/>
           </Section>
-          <Section id='tools' classes='bg-base-200'>
+          <Section refProp={toolsRef} id='tools' classes='bg-base-200'>
             <SectionTools/>
           </Section>
-          <Section id='footer'></Section>
+          <Section refProp={footerRef} id='footer'></Section>
         </div> 
         <div className="drawer-side h-full">
           <div htmlFor="side-menu-drawer"  className="drawer-overlay w-full h-full fixed" onClick={toggleVisible}></div> 
           <ul className="menu p-4 w-60 bg-base-100 h-full fixed">
-            <li><a href='#experience' onClick={toggleVisible}>Experience</a></li>
-            <li><a href='#project-list' onClick={toggleVisible}>Projects</a></li>
-            <li><a href='#skills' onClick={toggleVisible}>Skills</a></li>
-            <li><a href='#tools' onClick={toggleVisible}>Tools</a></li>
+            <li><Anchor href='#experience' onClick={toggleVisible} index={1} activeIndex={activeIndex}>Experience</Anchor></li>
+            <li><Anchor href='#project-list'onClick={toggleVisible} index={2} activeIndex={activeIndex}>Projects</Anchor></li>
+            <li><Anchor href='#skills' onClick={toggleVisible} index={3} activeIndex={activeIndex}>Skills</Anchor></li>
+            <li><Anchor href='#tools'  onClick={toggleVisible} index={4} activeIndex={activeIndex}>Tools</Anchor></li>
           </ul>
         </div>
       </div>
