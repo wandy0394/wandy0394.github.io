@@ -8,8 +8,8 @@ function ProjectCard({id, projectName, description}) {
               </h2>
               <p>{description}</p>
               <div className='flex justify-center items-center gap-4 py-4 px-4'>
-                <button className='btn btn-sm btn-accent'>Try me</button>
-                <button className='btn btn-sm '>Source</button>
+                <button className='btn btn-sm btn-accent bg-teal-900 border-teal-900'>Try me</button>
+                <button className='btn btn-sm bg-slate-800'>Source</button>
               </div>
             </div>
         </div>
