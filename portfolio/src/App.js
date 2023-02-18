@@ -16,7 +16,7 @@ function NavLink({href, label}) {
 function Section({id, children, classes}) {
   return (
     <div id={id} className={`min-h-screen py-20 xl:py-0 w-full ${classes}`}>
-      <div className='px-4 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
+      <div className='px-16 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
         {children}
       </div>
     </div>
