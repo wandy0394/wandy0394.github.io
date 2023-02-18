@@ -49,8 +49,8 @@ function App() {
             </div>
             <div className="flex-none navbar-end hidden md:block w-1/2 md:w-3/4">
               <div className='hidden tabs gap-x-4 items-center justify-end md:flex'>
-                  <NavLink href='#project-list' label='Projects'/>
                   <NavLink href='#experience' label='Experience'/>
+                  <NavLink href='#project-list' label='Projects'/>
                   <NavLink href='#skills' label='Skills'/>
                   <NavLink href='#tools' label='Tools'/>
               </div>
@@ -82,7 +82,7 @@ function App() {
           <Section id='experience'>
             Experience
           </Section>
-          <Section id='project-list' classes='bg-base-200 h-full'>
+          <Section id='project-list' classes='bg-base-200'>
             <SectionProjects/>
           </Section>
           <Section id='skills' classes=''>
@@ -96,8 +96,8 @@ function App() {
         <div className="drawer-side h-full">
           <label for="side-menu-drawer"  className="drawer-overlay" onClick={toggleVisible}></label> 
           <ul className="menu p-4 w-80 bg-base-100">
-            <li><a href='#project-list' onClick={toggleVisible}>Projects</a></li>
             <li><a href='#experience' onClick={toggleVisible}>Experience</a></li>
+            <li><a href='#project-list' onClick={toggleVisible}>Projects</a></li>
             <li><a href='#skills' onClick={toggleVisible}>Skills</a></li>
             <li><a href='#tools' onClick={toggleVisible}>Tools</a></li>
 

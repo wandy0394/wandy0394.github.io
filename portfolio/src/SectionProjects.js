@@ -1,19 +1,17 @@
 function ProjectCard({id, projectName, description}) {
     return (
-        <div id={id}className='carousel-item w-full md:w-1/2 lg:w-1/3'>
-          <div className='rounded-none w-full border border-solid border-base-300 h-full bg-base-200'>
-            <div className='h-3/5 bg-slate-700'> IMAGE </div>
-            <div className='card-body space-y-2 pt-8'>
+        <div id={id} className='carousel-item pt-52 -mt-52 h-full md:w-1/2 lg:w-1/3 grid grid-rows-2 w-full'>
+            <div className='bg-slate-700'> IMAGE </div>
+            <div className='bg-gray-800 space-y-2 px-4 pt-4'>
               <h2 className='card-title'>
                 {projectName}
               </h2>
               <p>{description}</p>
-              <div className='card-actions flex justify-end items-end h-full gap-4'>
-                <button className='btn btn-accent'>Try me</button>
-                <button className='btn'>Source</button>
+              <div className='flex justify-center items-center gap-4 py-4 px-4'>
+                <button className='btn btn-sm btn-accent'>Try me</button>
+                <button className='btn btn-sm '>Source</button>
               </div>
             </div>
-          </div>
         </div>
     )
 }
@@ -26,28 +24,31 @@ const projects = [
 ]
 
 export default function SectionProjects() {
+
     return (
-        <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-3/4 w-full px-4 md:px-16'>
-              <div className='prose'>
-                <h1 className='border-b border-teal-400'>Projects</h1>
-              </div>
-              <div className='carousel carousel-center w-full h-full space-x-8 p-8 bg-base-300'>
-                {
-                    projects.map((project)=>{
-                        return (
-                            <ProjectCard id={project.id} projectName={project.projectName} description={project.description}/>
-                        )
-                    })
-                }
-               
-              </div>
-              <div className='flex justify-center w-full py-2 gap-2'>
-                <a href='#project-1' class='btn btn-xs'>1</a>
-                <a href='#project-2' class='btn btn-xs'>2</a>
-                <a href='#project-3' class='btn btn-xs'>3</a>
-                <a href='#project-4' class='btn btn-xs'>4</a>
-              </div>
+        <div className='flex flex-col gap-y-8 items-center justify-center h-full w-full px-0 md:px-16'>
+            <div className='prose'>
+            <h1 className='hidden border-b border-teal-400 md:block'>Projects</h1>
+            <h2 className='border-b border-teal-400 md:hidden'>Projects</h2>
             </div>
+            <div className='carousel carousel-center w-full h-full space-x-8 p-4 md:p-8 bg-base-300'>
+            {
+                projects.map((project)=>{
+                    return (
+                        <ProjectCard id={project.id} projectName={project.projectName} description={project.description}/>
+                    )
+                })
+            }
+            
+            </div>
+            <div className='flex justify-center w-full py-2 gap-2'>
+            <a href='#project-1' class='btn btn-xs'>1</a>
+            <a href='#project-2' class='btn btn-xs'>2</a>
+            <a href='#project-3' class='btn btn-xs'>3</a>
+            <a href='#project-4' class='btn btn-xs'>4</a>
+            </div>
+        </div>
+        
     )
 
 }

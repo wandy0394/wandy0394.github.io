@@ -12,7 +12,8 @@ export default function SectionSkills() {
     return (
         <div className='flex flex-col gap-y-8 px-4 md:px-16 items-center justify-center gap-2 h-full w-full'>
             <div className='prose'>
-                <h1 className='border-b border-teal-400'>Skills</h1>
+                <h1 className='hidden border-b border-teal-400 md:block'>Skills</h1>
+                <h2 className='border-b border-teal-400 md:hidden'>Skills</h2>
             </div>
             <div id='skill-set' className='grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-16 w-full'>
                 <Card title='Technical'>
