@@ -7,8 +7,6 @@ import SectionProjects from './SectionProjects'
 import SectionExperience from './SectionExperience'
 
 function NavLink({href, label, index, activeIndex}) {
-
-
   return (
     <a href={href} className={`${index==activeIndex?'border-accent-focus':''} tab tab-bordered cursor-pointer hover:text-accent-focus hover:border-accent-focus`}>
       <p className='prose-xl'>{label}</p>
@@ -25,8 +23,19 @@ function Anchor({href, children, index, activeIndex, onClick}) {
 function Section({id, children, classes, refProp}) {
 
   return (
-    <div ref={refProp} id={id} className={`min-h-screen py-20 xl:py-0 w-full ${classes}`}>
-      <div className='px-16 md:px-24 h-full w-full min-h-screen flex flex-col items-center justify-center'>
+    <div ref={refProp} id={id} className={`min-h-screen py-20 lg:py-0 w-full ${classes}`}>
+      <div className='min-h-screen px-16 md:px-24 h-full w-full flex flex-col items-center justify-center'>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function Footer({id, children, classes, refProp}) {
+
+  return (
+    <div ref={refProp} id={id} className={`h-[50vh] py-20 xl:py-0 w-full ${classes}`}>
+      <div className='px-16 md:px-24 h-full w-full flex flex-col items-center justify-center'>
         {children}
       </div>
     </div>
@@ -37,13 +46,11 @@ function Section({id, children, classes, refProp}) {
 
 
 
-
 function App() {
 
   const [visible, setVisible] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const [scrollvalue, setScrollvalue] = useState(0)
-  // const [refs, setRefs] = useState([])
 
   const descRef = useRef(null)
   const expRef = useRef(null)
@@ -61,7 +68,7 @@ function App() {
   function handleScroll() {
     let index = 0
     refs.map(ref=>{
-      if (ref.current.offsetTop + window.innerHeight/2 < window.scrollY) {
+      if (ref.current.offsetTop + window.innerHeight / 2 < window.scrollY) {
         index++
       }
     })
@@ -119,19 +126,21 @@ function App() {
             </div>
           </Section>
 
-          <Section refProp={expRef} id='experience'>
-            <SectionExperience/>
+          <Section id='experience'>
+            <SectionExperience refProp={expRef} />
           </Section>
-          <Section refProp={projectRef} id='project-list' classes='bg-base-200'>
-            <SectionProjects/>
+          <Section  id='project-list' classes='bg-base-200'>
+            <SectionProjects refProp={projectRef}/>
           </Section>
-          <Section refProp={skillsRef} id='skills' classes=''>
-            <SectionSkills/>
+          <Section id='skills' classes=''>
+            <SectionSkills refProp={skillsRef} />
           </Section>
-          <Section refProp={toolsRef} id='tools' classes='bg-base-200'>
-            <SectionTools/>
+          <Section id='tools' classes='bg-base-200'>
+            <SectionTools refProp={toolsRef} />
           </Section>
-          <Section refProp={footerRef} id='footer'></Section>
+          <Footer refProp={footerRef} id='footer'>
+            Updated 2023
+          </Footer>
         </div> 
         <div className="drawer-side h-full">
           <div htmlFor="side-menu-drawer"  className="drawer-overlay w-full h-full fixed" onClick={toggleVisible}></div> 

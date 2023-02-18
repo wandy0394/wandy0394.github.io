@@ -27,10 +27,10 @@ function ExperienceCard({duration, years, title, subtitle, company}) {
 }
 
 
-export default function SectionExperience() {
+export default function SectionExperience({refProp}) {
     return (
         <div className='flex flex-col gap-y-8 items-center justify-center h-full w-full px-0 md:px-16 md:py-24'>
-            <div className='prose'>
+            <div ref={refProp} className='prose'>
                 <h1 className='hidden border-b border-teal-400 md:block'>Experience</h1>
                 <h2 className='border-b border-teal-400 md:hidden'>Experience</h2>
             </div>

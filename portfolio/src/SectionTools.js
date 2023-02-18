@@ -12,14 +12,13 @@ function ToolCard({children}) {
      </div>
     )
 }
-export default function SectionTools() {
+export default function SectionTools({refProp}) {
     return (
         <div className='flex flex-col gap-y-8 px-4 md:px-16 items-center justify-center gap-2 h-full w-full'>
-            <div className='prose'>
+            <div ref={refProp} className='prose'>
                 <h1 className='hidden border-b border-teal-400 md:block'>Tools</h1>
                 <h2 className='border-b border-teal-400 md:hidden'>Tools</h2>
             </div>
-            {/* <div id='tool-set' className='flex gap-16 h-full w-full items-start justify-center flex-wrap'> */}
             <div id='tool-set' className='grid grid-rows-3 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 gap-16 w-full'>
                 <Card title='Frontend'>
                     <ToolCard>

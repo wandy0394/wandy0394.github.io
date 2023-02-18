@@ -8,10 +8,10 @@ function SkillCard({label}) {
     )
 }
 
-export default function SectionSkills() {
+export default function SectionSkills({refProp}) {
     return (
         <div className='flex flex-col gap-y-8 px-4 md:px-16 items-center justify-center gap-2 h-full w-full'>
-            <div className='prose'>
+            <div ref={refProp} className='prose'>
                 <h1 className='hidden border-b border-teal-400 md:block'>Skills</h1>
                 <h2 className='border-b border-teal-400 md:hidden'>Skills</h2>
             </div>
@@ -20,7 +20,7 @@ export default function SectionSkills() {
                     <SkillCard label='Requirements Analysis'/>
                     <SkillCard label='Systems Design'/>
                     <SkillCard label='Solution Implementation'/>
-                    <SkillCard label='Testing, Validation and Verification'/>
+                    <SkillCard label='Testing, Validation, Verification'/>
                     <SkillCard label='Troubleshooting'/>
                     <SkillCard label='Configuration Management'/>                    
                 </Card>

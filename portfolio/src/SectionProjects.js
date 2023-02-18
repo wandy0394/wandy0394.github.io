@@ -1,6 +1,6 @@
 function ProjectCard({id, projectName, description}) {
     return (
-        <div id={id} className='carousel-item pt-52 -mt-52 h-full md:w-1/2 lg:w-1/3 grid grid-rows-2 w-full'>
+        <div id={id} className='carousel-item pt-52 -mt-52 h-full md:w-1/2 lg:w-1/3 grid grid-rows-2 w-full shadow-xl'>
             <div className='bg-slate-700'> IMAGE </div>
             <div className='bg-gray-800 space-y-2 px-4 pt-4'>
               <h2 className='card-title'>
@@ -23,11 +23,11 @@ const projects = [
     {id: 'project-4', projectName:'Project 4', description:'Descriptive blurb goes here'},
 ]
 
-export default function SectionProjects() {
+export default function SectionProjects({refProp}) {
 
     return (
         <div className='flex flex-col gap-y-8 items-center justify-center h-full w-full px-0 md:px-16'>
-            <div className='prose'>
+            <div ref={refProp} className='prose'>
                 <h1 className='hidden border-b border-teal-400 md:block'>Projects</h1>
                 <h2 className='border-b border-teal-400 md:hidden'>Projects</h2>
             </div>
