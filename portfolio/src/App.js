@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import SectionTools from './SectionTools'
 import SectionSkills from './SectionSkills'
+import SectionProjects from './SectionProjects'
 
 function NavLink({href, label}) {
   return (
@@ -82,80 +83,7 @@ function App() {
             Experience
           </Section>
           <Section id='project-list' classes='bg-base-200 h-full'>
-            <div className='flex flex-col gap-y-8 items-center justify-center gap-2 h-3/4 w-full px-16'>
-              <div className='prose'>
-                <h1 className='border-b border-teal-400'>Projects</h1>
-              </div>
-              <div className='carousel w-full h-full space-x-8'>
-                <div id='project-1' className='carousel-item w-full md:w-1/2 lg:w-1/3'>
-                  <div className='card rounded-none w-full border border-solid border-black h-full'>
-                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
-                    <div className='card-body space-y-2 pt-4'>
-                      <h2 className='card-title'>
-                        Project 1
-                      </h2>
-                      <p>Descriptive text about project goes here</p>
-                      <div className='card-actions flex justify-end gap-4'>
-                        <button className='btn btn-accent'>Try me</button>
-                        <button className='btn'>Source</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
-                  <div id='project-2' className='card rounded-none w-full border border-solid border-black h-full'>
-                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
-                    <div className='card-body space-y-2 pt-4'>
-                      <h2 className='card-title'>
-                        Project 2
-                      </h2>
-                      <p>Descriptive text about project goes here</p>
-                      <div className='card-actions flex justify-end gap-4'>
-                        <button className='btn btn-accent'>Try me</button>
-                        <button className='btn'>Source</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
-                  <div id='project-3' className='card rounded-none w-full border border-solid border-black h-full'>
-                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
-                    <div className='card-body space-y-2 pt-4'>
-                      <h2 className='card-title'>
-                        Project 3
-                      </h2>
-                      <p>Descriptive text about project goes here</p>
-                      <div className='card-actions flex justify-end gap-4'>
-                        <button className='btn btn-accent'>Try me</button>
-                        <button className='btn'>Source</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='carousel-item w-full md:w-1/2 lg:w-1/3'>
-                  <div id='project-4' className='card rounded-none w-full border border-solid border-black h-full'>
-                    <div className='h-3/5 bg-slate-700'> IMAGE </div>
-                    <div className='card-body space-y-2 pt-4'>
-                      <h2 className='card-title'>
-                        Project 4
-                      </h2>
-                      <p>Descriptive text about project goes here</p>
-                      <div className='card-actions flex justify-end gap-4'>
-                        <button className='btn btn-accent'>Try me</button>
-                        <button className='btn'>Source</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>                                                
-              </div>
-              <div className='flex justify-center w-full py-2 gap-2'>
-                <a href='#project-1' class='btn btn-xs'>1</a>
-                <a href='#project-2' class='btn btn-xs'>2</a>
-                <a href='#project-3' class='btn btn-xs'>3</a>
-                <a href='#project-4' class='btn btn-xs'>4</a>
-              </div>
-            </div>
-
+            <SectionProjects/>
           </Section>
           <Section id='skills' classes=''>
             <SectionSkills/>
