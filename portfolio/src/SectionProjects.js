@@ -28,8 +28,8 @@ export default function SectionProjects() {
     return (
         <div className='flex flex-col gap-y-8 items-center justify-center h-full w-full px-0 md:px-16'>
             <div className='prose'>
-            <h1 className='hidden border-b border-teal-400 md:block'>Projects</h1>
-            <h2 className='border-b border-teal-400 md:hidden'>Projects</h2>
+                <h1 className='hidden border-b border-teal-400 md:block'>Projects</h1>
+                <h2 className='border-b border-teal-400 md:hidden'>Projects</h2>
             </div>
             <div className='carousel carousel-center w-full h-full space-x-8 p-4 md:p-8 bg-base-300'>
             {

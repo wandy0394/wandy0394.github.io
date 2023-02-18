@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import SectionTools from './SectionTools'
 import SectionSkills from './SectionSkills'
 import SectionProjects from './SectionProjects'
+import SectionExperience from './SectionExperience'
 
 function NavLink({href, label, index, activeIndex}) {
 
@@ -119,7 +120,7 @@ function App() {
           </Section>
 
           <Section refProp={expRef} id='experience'>
-            Experience
+            <SectionExperience/>
           </Section>
           <Section refProp={projectRef} id='project-list' classes='bg-base-200'>
             <SectionProjects/>
